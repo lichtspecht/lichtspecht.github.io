@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url('fonts/norwester.regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+	background: rgb(235, 230, 219);
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 5rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
