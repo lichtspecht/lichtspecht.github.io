@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>lichtspecht.de</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lichtspecht</title>
+	<link rel="icon" href="assets/images/favicon.png">
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js" defer></script>
+	<script src="products/products.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>LICHTSPECHT</h1>
-    <p>Willkommen bei lichtspecht. Wir stellen tolle Produkte aus nachhaltigen Rohstoffen her.</p>
+	<header class="header">
+		<div class="left"></div>
+		<div class="center">
+			<img src="assets/images/logo.png" alt="lichtspecht logo" class="logo">
+		</div>
+		<div class="right">
+			<div class="social-icons">
+				<a href="https://www.instagram.com/lichtspecht/" target="_blank">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+				<a href="https://www.youtube.com/@lichtspecht" target="_blank">
+					<i class="fa-brands fa-youtube"></i>
+				</a>
+				<a href="https://www.facebook.com/" target="_blank">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+				<!-- <a href="https://www.etsy.com" target="_blank">
+					<i class="fa-brands fa-etsy"></i>
+				</a> -->
+			</div>
+		</div>
+		
+	</header>
+
+	<div id="menu" class="menu">
+		<a class="icon" onclick="toggleMenu(event)"><i class="fa-solid fa-bars"></i></a>
+		<a class="tab active" data-tab="home" onclick="closeMenu(event)">Home</a>
+		<a class="tab" data-tab="products" onclick="closeMenu(event)">Produkte</a>
+		<a class="tab" data-tab="about" onclick="closeMenu(event)">Über uns</a>
+		<a class="shop" href="https://www.etsy.com" target="_blank">
+			<span>Etsy Shop</span>
+			<i class="fa-solid fa-cart-shopping"></i>
+		</a>				
+	</div>
+
+	<main class="content">	
+		<section id="home" class="tab-content active">
+			<h1>Herzlich Willkommen bei lichtspecht!</h1>
+			<p>Die Webseite ist aktuell im Aufbau. Komm gerne in ein paar Tagen wieder!</p>
+			<h1>Neue Produkte</h1>
+			<div class="product-grid" id="new-product-grid"></div>
+		</section>
+
+		<section id="products" class="tab-content">
+			<h1>Unsere Produkte</h1>
+			<div class="product-grid" id="product-grid"></div>
+		</section>
+
+		<section id="about" class="tab-content">
+			<h1>Licht trifft Papier, Pappe und Holz!</h1>
+			<p>Wir stellen schöne, nahchaltige Produkte für zu Hause oder zum Verschenken her! Dafür kommen ausschließlich nachwachsende und wenn möglich recyclte Rohstoffe wie Holz, Papier und Pappe zum Einsatz.</p>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p>&copy; 2024 lichtspecht.de</p>
+		<p> Impressum</p>
+		<p> Datenschutz</p>
+		<p> Cookies</p>
+	</footer>
 </body>
+
 </html>
