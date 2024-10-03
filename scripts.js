@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggleMenu(event)
 {
-	console.log("toggle");
 	event.stopPropagation();
 	var menu = document.getElementById("menu");
 	if (menu.className === "menu")
@@ -67,7 +66,6 @@ function toggleMenu(event)
 
 function closeMenu(event)
 {
-	console.log("close");
 	var menu = document.getElementById("menu");
 	if (menu.className === "menu responsive")
  	{
@@ -78,7 +76,7 @@ function closeMenu(event)
 function previousImage(event, index)
 {
 	event.preventDefault();
-	const img = document.getElementById("Image" + index);
+	const img = event.target.parentElement.parentElement.firstElementChild;
 	const prod = products[index];
 	prod.imgIndex--;
 
@@ -92,7 +90,7 @@ function previousImage(event, index)
 function nextImage(event, index)
 {
 	event.preventDefault();
-	const img = document.getElementById("Image" + index);
+	const img = event.target.parentElement.parentElement.firstElementChild;
 	const prod = products[index];
 	prod.imgIndex++;
 

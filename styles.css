@@ -197,21 +197,29 @@ h1 {
 	position: relative;
 }
 
+.product .images i {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	opacity: 10%;
+	padding: 1rem;
+	font-size: 1.7rem;
+}
+
+.product .images .next i {
+	justify-content: flex-end;
+}
+
 .product .images .previous,
 .product .images .next {
 	position: absolute;
 	width: 50%;
 	top: 0;
 	bottom: 0;
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-	font-size: 1.7rem;
-	opacity: 10%;
 }
 
-.product .images .previous:hover,
-.product .images .next:hover {
+.product .images i:hover {
 	opacity: 50%;
 	text-shadow: var(--shadow-light);
 }
@@ -222,7 +230,6 @@ h1 {
 
 .product .images .next {
 	right: 0;
-	justify-content: flex-end;
 }
 
 .product img {
