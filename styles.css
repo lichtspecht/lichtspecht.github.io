@@ -1,15 +1,15 @@
 :root {
-    --dark: #392c1b;
-    --green: #9b9b5b;
-    --light-green: #bbbb8b;
-    --light: #f0f2e9;
-    --red: #a7261b;
-    --white: #FFF;
-    --black: #000;
+	--dark: #392c1b;
+	--green: #9b9b5b;
+	--light-green: #bbbb8b;
+	--light: #f0f2e9;
+	--red: #a7261b;
+	--white: #FFF;
+	--black: #000;
 
-    --radius: 0.5rem;
-    --radius-small: 0.25rem;
-    --radius-big: 1rem;
+	--radius: 0.5rem;
+	--radius-small: 0.25rem;
+	--radius-big: 1rem;
 
 	--shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 	--shadow-dark: 0px 0px 12px rgba(0, 0, 0, 0.5);
@@ -52,10 +52,10 @@ a:visited {
 }
 
 h1 {
- font-weight: bold;
- font-size: 1.2rem;
- margin-bottom: 1rem;
- margin-top: 2rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
 }
 
 .header {
@@ -198,7 +198,9 @@ h1 {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	opacity: 10%;
+	opacity: 50%;
+	color: var(--white);
+	mix-blend-mode: difference;
 	padding: 1rem;
 	font-size: 1.7rem;
 }
@@ -286,8 +288,7 @@ h1 {
 	}
 
 	.product .images i:hover {
-		opacity: 50%;
-		text-shadow: var(--shadow-light);
+		opacity: 80%;
 	}
 }
 
