@@ -21,36 +21,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// Produkte dynamisch laden
-	const productGrid = document.getElementById("product-grid");
-	const newProductGrid = document.getElementById("new-product-grid");
+	// // Produkte dynamisch laden
+	// const productGrid = document.getElementById("product-grid");
+	// const newProductGrid = document.getElementById("new-product-grid");
 
-	products.forEach((product, index) => {
-		product.imgIndex = 0;
-		const productTile = document.createElement("a");
-		productTile.classList.add("product");
-		productTile.href = product.link;
-		productTile.target="_blank"
-		productTile.innerHTML = `
-				<div class="images">
-					<img id="Image${index}" src="products/${product.name}/${product.images[product.imgIndex]}" alt="${product.name}">
-					<div class="previous" onclick="previousImage(event, ${index})"><i class="fa-solid fa-chevron-left"></i></div>
-					<div class="next" onclick="nextImage(event, ${index})"><i class="fa-solid fa-chevron-right"></i></div>
-				</div>
-				<div class="line">
-					<div class="title">${product.title}</div>
-					<div class="price">${product.price.toFixed(2)} €</div>
-				</div>
-				<div class="text">${product.text}</div>
-				<div class="icon"><i class="fa-solid fa-arrow-right"></i></div>
-			`;
-		productGrid.appendChild(productTile);
+	// products.forEach((product, index) => {
+	// 	product.imgIndex = 0;
+	// 	const productTile = document.createElement("a");
+	// 	productTile.classList.add("product");
+	// 	productTile.href = product.link;
+	// 	productTile.target="_blank"
+	// 	productTile.innerHTML = `
+	// 			<div class="images">
+	// 				<img id="Image${index}" src="products/${product.name}/${product.images[product.imgIndex]}" alt="${product.name}">
+	// 				<div class="previous" onclick="previousImage(event, ${index})"><i class="fa-solid fa-chevron-left"></i></div>
+	// 				<div class="next" onclick="nextImage(event, ${index})"><i class="fa-solid fa-chevron-right"></i></div>
+	// 			</div>
+	// 			<div class="line">
+	// 				<div class="title">${product.title}</div>
+	// 				<div class="price">${product.price.toFixed(2)} €</div>
+	// 			</div>
+	// 			<div class="text">${product.text}</div>
+	// 			<div class="icon"><i class="fa-solid fa-arrow-right"></i></div>
+	// 		`;
+	// 	productGrid.appendChild(productTile);
 		
-		if(index < 3)
-		{
-			newProductGrid.appendChild(productTile.cloneNode(true));
-		}
-	});
+	// 	if(index < 3)
+	// 	{
+	// 		newProductGrid.appendChild(productTile.cloneNode(true));
+	// 	}
+	// });
 });
 
 function toggleMenu(event)
@@ -76,30 +76,34 @@ function closeMenu(event)
 	}
 }
 
-function previousImage(event, index)
+function previousImage(event)
 {
 	event.preventDefault();
-	const img = event.target.parentElement.parentElement.firstElementChild;
-	const prod = products[index];
-	prod.imgIndex--;
+	
+	const container = event.target.parentElement.parentElement;
+	const images = container.querySelectorAll("img");
+	const active_image = container.querySelector(".active");
+	const current_index = Array.from(images).indexOf(active_image);
 
-	if (prod.imgIndex < 0)
-	{
-		prod.imgIndex = prod.images.length - 1;
-	}
-	img.src = `products/${prod.name}/${prod.images[prod.imgIndex]}`;
+	active_image.classList.remove("active");
+
+	const previous_index = (current_index - 1 + images.length) % images.length;
+    
+    images[previous_index].classList.add('active');
 }
 
-function nextImage(event, index)
+function nextImage(event)
 {
 	event.preventDefault();
-	const img = event.target.parentElement.parentElement.firstElementChild;
-	const prod = products[index];
-	prod.imgIndex++;
+	
+	const container = event.target.parentElement.parentElement;
+	const images = container.querySelectorAll("img");
+	const active_image = container.querySelector(".active");
+	const current_index = Array.from(images).indexOf(active_image);
 
-	if (prod.imgIndex >= prod.images.length)
-	{
-		prod.imgIndex = 0;
-	}
-	img.src = `products/${prod.name}/${prod.images[prod.imgIndex]}`;
+	active_image.classList.remove("active");
+
+	const next_index = (current_index + 1) % images.length;
+    
+    images[next_index].classList.add('active');
 }
