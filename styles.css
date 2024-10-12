@@ -108,16 +108,17 @@ h1 {
 
 .menu a {
 	padding: 0.5rem;
-	cursor: pointer;
 	border-radius: var(--radius);
 	display: block;
 	text-align: left;
+	cursor: default;
 }
 
 .menu .active {
 	background-color: var(--dark);
 	color: var(--light);
 	display: block;
+	font-weight: bold;
 }
 
 .menu .icon {
@@ -198,7 +199,7 @@ h1 {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	opacity: 50%;
+	opacity: 20%;
 	color: var(--white);
 	mix-blend-mode: difference;
 	padding: 1rem;
@@ -279,8 +280,9 @@ h1 {
 }
 
 @media (hover: hover) {
-	.menu a:hover {
-		background-color: var(--light-green);
+	.menu a:hover:not(.active) {
+		scale: 1.07;
+		cursor: pointer;
 	}
 
 	.product:hover {
@@ -288,7 +290,7 @@ h1 {
 	}
 
 	.product .images i:hover {
-		opacity: 80%;
+		opacity: 60%;
 	}
 }
 
@@ -324,7 +326,7 @@ h1 {
 
 	.product {
 		width: 320px;
-		max-width: 320px;
+		max-width: 350px;
 	}
 
 	.footer {
