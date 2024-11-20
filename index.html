@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lichtspecht</title>
+	<link rel="icon" href="assets/images/favicon.png">
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js" defer></script>
+	<script src="products/products.js" defer></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+	<link href="assets/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+	<link href="assets/fontawesome/css/regular.min.css" rel="stylesheet" />
+	<link href="assets/fontawesome/css/solid.min.css" rel="stylesheet" />
+	<link href="assets/fontawesome/css/brands.min.css" rel="stylesheet" />
+	<meta name="google-site-verification" content="15fPv6_SJGJ1l_ip_jo1UeTFkeZjWsBZ_P13WXE7F6U" />
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<div class="left"></div>
+			<div class="center">
+				<a href="https://www.lichtspecht.de/"><img src="assets/images/logo.png" alt="lichtspecht logo" class="logo"></a>
+			</div>
+			<div class="right">
+				<div class="social-icons">
+					<a href="https://www.instagram.com/lichtspecht/" target="_blank">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<!-- <a href="https://www.youtube.com/@lichtspecht" target="_blank">
+						<i class="fa-brands fa-youtube"></i>
+					</a> -->
+					<!-- <a href="https://www.facebook.com/" target="_blank">
+						<i class="fa-brands fa-facebook"></i>
+					</a> -->
+				</div>
+			</div>
+		</div>
+
+		<nav id="menu">
+			<a class="icon" onclick="toggleMenu(event)"><i class="fa-solid fa-bars"></i></a>
+			<a class="tab active" data-tab="home">Home</a>
+			<a class="tab" data-tab="products">Produkte</a>
+			<a class="tab" data-tab="about">Über uns</a>
+			<a class="shop" href="https://www.etsy.com/de/shop/lichtspecht" target="_blank">
+				<span>Etsy Shop</span>
+				<i class="fa-solid fa-cart-shopping"></i>
+			</a>
+		</nav>
+
+	</header>
+
+	<main class="content">
+		<!-- <p class="warning">Achtung! Diese Webseite ist aktuell noch im Aufbau. Schau gerne in ein paar Tagen nochmal vorbei!</p> -->
+		<section id="home" class="tab-content active">
+			<h1>Herzlich Willkommen bei lichtspecht!</h1>
+			<p>
+				Hier findest du schöne Produkte in modernem Design zum Verschenken oder für die eigenen vier Wände.
+				Sie landen als Bastelset direkt in deinem Briefkasten und müssen nur noch mit etwas Geschick zusammengesteckt werden.
+				<br>Viel Spaß beim Stöbern!</p>
+
+			<article>
+				<h2>Neuestes Produkt</h2>
+
+				<div class="product" onclick="toggle_expansion(this)">
+					<div class="images">
+						<img class="active" src="products/Nebelnest/1.JPG" alt="Fertige Weihnachtsbaumkugel vor Bastelset Bild 1">
+						<img class="" src="products/Nebelnest/2.JPG" alt="Übersicht des Bastelsets auf Pappe Bild 2">
+						<img class="" src="products/Nebelnest/3.JPG" alt="Übersicht der einzelnen Teile Bild 3">
+						<img class="" src="products/Nebelnest/4.JPG" alt="Weihnachtsbaumkugel im Aufbau mit Bastelset im Hintergrund Bild 4">
+						<img class="" src="products/Nebelnest/5.JPG" alt="Fertige Weihnachtsbaumkugeln am Faden hängend Bild 5">
+						<div class="previous" onclick="previousImage(event)"><i class="fa-solid fa-chevron-left"></i></div>
+						<div class="next" onclick="nextImage(event)"><i class="fa-solid fa-chevron-right"></i></div>
+					</div>
+					<div class="line">
+						<div class="title">Nebelnest</div>
+						<a class="shop" href="https://www.etsy.com/de/listing/1812149072/bastelset-weihnachstbaumkugel-nebelnest" target="_blank">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<div class="price">5.90 €</div>
+						</a>
+					</div>
+					<div class="text">Bastelset Dekokugel</div>
+					<div class="details">
+						<div class="prop"><div class="key">Material:</div><div class="value">Finnpappe</div></div>
+						<div class="prop"><div class="key">Größe:</div><div class="value">70 mm</div></div>
+						<div class="prop"><div class="key">Farbe:</div><div class="value">cremeweiß, braun</div></div>
+						<br>
+						<p>Mit diesem Bastelset kannst du eine dekorative Kugel mit einem Durchmesser von ca. 70 mm gestalten – perfekt als stilvolle Wohnungsdekoration oder einzigartiger Schmuck für den Weihnachtsbaum. Dank des praktischen Formats eignet es sich auch hervorragend als Geschenk für deine Liebsten! Die präzise lasergeschnittenen Teile lassen sich einfach aus der Form herausdrücken und ohne Kleber zusammenstecken. Eine leicht verständliche Anleitung ist direkt auf dem Set enthalten.</p>
+						<p>Die Kugel ist nicht wasserfest und daher nur für Inneräume geeignet.</p>
+						<p>Lieferumfang: 1 Bastelset bestehend aus 1x Finnpappe + 1x Faden zum Aufhängen</p>
+					</div>
+					<div class="expansion-toggle"><i class="fa-solid fa-chevron-down"></i></i></div>
+				</div>
+
+			</article>
+
+		</section>
+
+		<section id="products" class="tab-content">
+			<h1>Unsere aktuellen Produkte</h1>
+			<div class="product-grid" id="product-grid">
+				<div class="product" onclick="toggle_expansion(this)">
+					<div class="images">
+						<img class="active" src="products/Nebelnest/1.JPG" alt="Fertige Weihnachtsbaumkugel vor Bastelset Bild 1">
+						<img class="" src="products/Nebelnest/2.JPG" alt="Übersicht des Bastelsets auf Pappe Bild 2">
+						<img class="" src="products/Nebelnest/3.JPG" alt="Übersicht der einzelnen Teile Bild 3">
+						<img class="" src="products/Nebelnest/4.JPG" alt="Weihnachtsbaumkugel im Aufbau mit Bastelset im Hintergrund Bild 4">
+						<img class="" src="products/Nebelnest/5.JPG" alt="Fertige Weihnachtsbaumkugeln am Faden hängend Bild 5">
+						<div class="previous" onclick="previousImage(event)"><i class="fa-solid fa-chevron-left"></i></div>
+						<div class="next" onclick="nextImage(event)"><i class="fa-solid fa-chevron-right"></i></div>
+					</div>
+					<div class="line">
+						<div class="title">Nebelnest</div>
+						<a class="shop" href="https://www.etsy.com/de/listing/1812149072/bastelset-weihnachstbaumkugel-nebelnest" target="_blank">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<div class="price">5.90 €</div>
+						</a>
+					</div>
+					<div class="text">Bastelset Dekokugel</div>
+					<div class="details">
+						<div class="prop"><div class="key">Material:</div><div class="value">Finnpappe</div></div>
+						<div class="prop"><div class="key">Größe:</div><div class="value">70 mm</div></div>
+						<div class="prop"><div class="key">Farbe:</div><div class="value">cremeweiß, braun</div></div>
+						<br>
+						<p>Mit diesem Bastelset kannst du eine dekorative Kugel mit einem Durchmesser von ca. 70 mm gestalten – perfekt als stilvolle Wohnungsdekoration oder einzigartiger Schmuck für den Weihnachtsbaum. Dank des praktischen Formats eignet es sich auch hervorragend als Geschenk für deine Liebsten! Die präzise lasergeschnittenen Teile lassen sich einfach aus der Form herausdrücken und ohne Kleber zusammenstecken. Eine leicht verständliche Anleitung ist direkt auf dem Set enthalten.</p>
+						<p>Die Kugel ist nicht wasserfest und daher nur für Inneräume geeignet.</p>
+						<p>Lieferumfang: 1 Bastelset bestehend aus 1x Finnpappe + 1x Faden zum Aufhängen</p>
+					</div>
+					<div class="expansion-toggle"><i class="fa-solid fa-chevron-down"></i></i></div>
+				</div>
+				
+				
+				<div class="product" onclick="toggle_expansion(this)">
+					<div class="images">
+						<img class="active" src="products/Feenfaecher/1.JPG" alt="Drei moderen Weihnachtsbaumkugeln hängen an Fäden Bild 1">
+						<img class="" src="products/Feenfaecher/2.JPG" alt="Weihnachtsbaumkugel im Aufbau mit Bastelset im Hintergrund Bild 2">
+						<img class="" src="products/Feenfaecher/3.JPG" alt="Fertige Weihnachtsbaumkugel mittlerer Größe vor Bastelset Bild 3">
+						<img class="" src="products/Feenfaecher/4.JPG" alt="Drei fertige Weihnachtsbaumkugeln (klein, mittel, groß) stehend Bild 4">
+						<img class="" src="products/Feenfaecher/5.JPG" alt="Übersicht der Materialen für eine Kugel Bild 5">
+						<img class="" src="products/Feenfaecher/6.JPG" alt="Übersicht des Bastelsets aus zwei A5 Pappen Bild 6">
+						<div class="previous" onclick="previousImage(event)"><i class="fa-solid fa-chevron-left"></i></div>
+						<div class="next" onclick="nextImage(event)"><i class="fa-solid fa-chevron-right"></i></div>
+					</div>
+					<div class="line">
+						<div class="title">Feenfächer</div>
+						<a class="shop" href="https://www.etsy.com/de/listing/1810977233/bastelset-fur-drei-weihnachtsbaumkugeln" target="_blank">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<div class="price">9.90 €</div>
+						</a>
+					</div>
+					<div class="text">Bastelset für drei Dekokugeln</div>
+					<div class="details">
+						<div class="prop"><div class="key">Material:</div><div class="value">Pappe</div></div>
+						<div class="prop"><div class="key">Größe:</div><div class="value">40 mm, 55 mm, 70 mm</div></div>
+						<div class="prop"><div class="key">Farbe:</div><div class="value">cremeweiß, braun</div></div>
+						<br>
+						<p>Das Bastelset enthält drei dekorative Kugeln mit Durchmessern von 40 mm, 55 mm und 70 mm – ideal als stilvolle Wohnungsdekoration oder Schmuck für den Weihnachtsbaum. Dank des praktischen Formats eignet es sich auch hervorragend als Geschenk für deine Liebsten! Die präzise lasergeschnittenen Teile lassen sich aus der Form herausdrücken und ohne Kleber zusammenstecken. Eine intuitive Anleitung ist direkt auf dem Set enthalten.</p>
+						<p>Die Kugeln sind nicht wasserfest und daher nur für Inneräume geeignet.</p>
+						<p>Lieferumfang: 1 Bastelset bestehend aus 2x Finnpappe (für 3 Kugeln mit den Durchmessern 70 mm, 55 mm und 40 mm) + 3x Faden zum Aufhängen</p>
+					</div>
+					<div class="expansion-toggle"><i class="fa-solid fa-chevron-down"></i></i></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="tab-content">
+			<article class="info">
+				<h1>Licht trifft Papier, Pappe und Holz</h1>
+				<p>
+					Wir kommen aus dem schönen Dresden und fertigen Bastelsets für Dekoration, Puzzle und mechanische Konstruktionen.
+					Hierzu werden Papier, Pappe und Holz mit Hilfe eines Lasercutters passgenau zugeschnitten. So können wir exakt arbeiten und hohe Qualität gewährleisten.
+					Wir sind aktuell im Aufbau und haben viele Ideen, die wir in nächster Zeit realisieren und veröffentlichen wollen.
+					Schaut also gerne bald wieder vorbei und freut euch auf viele schöne Produkte zum Basteln und Verschenken!
+					<br>Besucht uns auch auf <a href="https://www.instagram.com/lichtspecht/" target="_blank">Instagram</a> und teilt euer Lieblingsprodukt!
+				</p>
+			</article>
+
+			<article class="info">
+				<h1>Versand</h1>
+				<p>
+					Der Versand erfolgt innerhalb von 2-3 Werktagen und beträgt 1,95 € pro Bestellung.
+					Das Produkt kommt als Bastelset <nobr>(~ A5-Format)</nobr> und muss nur noch aus der Form gedrückt und zusammengsteckt werden.
+					Details findest du auf den entsprechenden Produktseiten unseres <a class="shop" href="https://www.etsy.com/de/shop/lichtspecht" target="_blank">Etsy-Shops</a>.
+					Eine Bestellung per <a href="mailto:info@lichtspecht.de">E-Mail</a> sowie Abholung der Bestellung ist auf Anfrage ebenfalls möglich.
+				</p>
+			</article>
+
+		</section>
+
+
+		<section id="impressum" class="tab-content">
+			<article>
+				<h1>Impressum</h1>
+				<p>
+					lichtspecht
+					<br>Jakob Forstmann
+					<br>Bautzner Str. 4
+					<br>01099 Dresden
+					<br>
+					<br>E-Mail: <a href="mailto:info@lichtspecht.de">info@lichtspecht.de</a>
+				</p>
+			</article>
+		</section>
+
+		<section id="datenschutz" class="tab-content">
+			<article>
+				<h1>Datenschutzerklärung</h1>
+				<p>Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.</p>
+				<p>Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt), gilt als „Verarbeitung“ jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.</p>
+				<p>Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir entweder allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung entscheiden. Zudem informieren wir Sie nachfolgend über die von uns zu Optimierungszwecken sowie zur Steigerung der Nutzungsqualität eingesetzten Fremdkomponenten, soweit hierdurch Dritte Daten in wiederum eigener Verantwortung verarbeiten.</p>
+				<p>Unsere Datenschutzerklärung ist wie folgt gegliedert:</p>
+				<ol>
+					<li>Informationen über uns als Verantwortliche</li>
+					<li>Rechte der Nutzer und Betroffenen</li>
+					<li>Informationen zur Datenverarbeitung</li>
+				</ol>
+
+				<h2>I. Informationen über uns als Verantwortliche</h2>
+				<p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
+				<p>
+					lichtspecht
+					<br>Jakob Forstmann
+					<br>Bautzner Str. 4
+					<br>01099 Dresden
+					<br>E-Mail: <a href="mailto:info@lichtspecht.de">info@lichtspecht.de</a>
+				</p>
+
+				<h2>II. Rechte der Nutzer und Betroffenen</h2>
+				<p>Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung haben die Nutzer und Betroffenen das Recht</p>
+				<ul>
+					<li>auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft über die verarbeiteten Daten, auf weitere Informationen über die Datenverarbeitung sowie auf Kopien der Daten (vgl. auch Art. 15 DSGVO);</li>
+					<li>auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten (vgl. auch Art. 16 DSGVO);</li>
+					<li>auf unverzügliche Löschung der sie betreffenden Daten (vgl. auch Art. 17 DSGVO), oder, alternativ, soweit eine weitere Verarbeitung gemäß Art. 17 Abs. 3 DSGVO erforderlich ist, auf Einschränkung der Verarbeitung nach Maßgabe von Art. 18 DSGVO;</li>
+					<li>auf Erhalt der sie betreffenden und von ihnen bereitgestellten Daten und auf Übermittlung dieser Daten an andere Anbieter/Verantwortliche (vgl. auch Art. 20 DSGVO);</li>
+					<li>auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht sind, dass die sie betreffenden Daten durch den Anbieter unter Verstoß gegen datenschutzrechtliche Bestimmungen verarbeitet werden (vgl. auch Art. 77 DSGVO).</li>
+				</ul>
+
+				<p>Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede Berichtigung oder Löschung von Daten oder die Einschränkung der Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese Empfänger.</p>
+				<p><strong>Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.</strong></p>
+				
+				<h2>III. Informationen zur Datenverarbeitung</h2>
+				<p>Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen und nachfolgend keine anderslautenden Angaben zu einzelnen Verarbeitungsverfahren gemacht werden.</p>
+				
+				<h3>Serverdaten</h3>
+				<p>Aus technischen Gründen, insbesondere zur Gewährleistung eines sicheren und stabilen Internetauftritts, werden Daten durch Ihren Internet-Browser an uns bzw. an unseren Webspace-Provider übermittelt. Mit diesen sog. Server-Logfiles werden u.a. Typ und Version Ihres Internetbrowsers, das Betriebssystem, die Website, von der aus Sie auf unseren Internetauftritt gewechselt haben (Referrer URL), die Website(s) unseres Internetauftritts, die Sie besuchen, Datum und Uhrzeit des jeweiligen Zugriffs sowie die IP-Adresse des Internetanschlusses, von dem aus die Nutzung unseres Internetauftritts erfolgt, erhoben.</p>
+				<p>Diese so erhobenen Daten werden vorrübergehend gespeichert, dies jedoch nicht gemeinsam mit anderen Daten von Ihnen.</p>
+				<p>Diese Speicherung erfolgt auf der Rechtsgrundlage von Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Verbesserung, Stabilität, Funktionalität und Sicherheit unseres Internetauftritts.</p>
+				<p>Diese Webseite wird gehostet auf Servern der Github Inc., 88 Colin P Kelly Jr. Street, San Francisco, CA 94107, USA. GitHub kann beim Aufruf dieser Webseiten technische Informationen inklusive ihrer IP Adresse aufzeichnen. Mehr Informationen finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+							
+				<h3>Allgemeine Verlinkung auf Profile bei Drittanbietern</h3>
+				<p>Der Anbieter setzt auf der Website eine Verlinkung auf die nachstehend aufgeführten sozialen Netzwerke ein.</p>
+				<p>Rechtsgrundlage ist hierbei Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse des Anbieters besteht an der Verbesserung der Nutzungsqualität der Website.</p>
+				<p>Die Einbindung der Plugins erfolgt dabei über eine verlinkte Grafik. Erst durch einen Klick auf die entsprechende Grafik wird der Nutzer zu dem Dienst des jeweiligen sozialen Netzwerks weitergeleitet.</p>
+				<p>Nach der Weiterleitung des Kunden werden durch das jeweilige Netzwerk Informationen über den Nutzer erfasst. Dies sind zunächst Daten wie IP-Adresse, Datum, Uhrzeit und besuchte Seite. Ist der Nutzer währenddessen in seinem Benutzerkonto des jeweiligen Netzwerks eingeloggt, kann der Netzwerk-Betreiber ggf. die gesammelten Informationen des konkreten Besuches des Nutzers dem persönlichen Account des Nutzers zuordnen. Interagiert der Nutzer über einen „Teilen“-Button des jeweiligen Netzwerks, können diese Informationen in dem persönlichen Benutzerkonto des Nutzers gespeichert und ggf. veröffentlicht werden. Will der Nutzer verhindern, dass die gesammelten Informationen unmittelbar seinem Benutzerkonto zugeordnet werden, muss sich der Nutzer vor dem Anklicken der Grafik ausloggen. Zudem besteht die Möglichkeit, das jeweilige Benutzerkonto entsprechend zu konfigurieren.</p>
+				<p>Folgende soziale Netzwerke sind vom Anbieter verlinkt:</p>
+				
+				<h4>Instagram</h4>
+				<p>Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland.</p>
+				<p>Datenschutzerklärung: <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener nofollow">https://help.instagram.com/519522125107875</a></p>
+
+				<h4>Etsy</h4>
+				<p>Etsy Ireland UC, 5th Floor, One Le Pole Square, Ship Street Great, Dublin 8,	Irland.</p>
+				<p>Datenschutzerklärung: <a href="https://www.etsy.com/de/legal/privacy/" target="_blank" rel="noopener nofollow">https://www.etsy.com/de/legal/privacy/</a></p>
+				
+				<br><br>
+				<p>- <a href="https://www.generator-datenschutzerklärung.de" target="_blank" rel="noopener">Muster-Datenschutzerklärung</a> der <a href="https://www.bewertung-löschen24.de" rel="nofollow noopener" target="_blank">Anwaltskanzlei Weiß &amp; Partner</a> -</p>
+			</article>		
+		</section>
+
+		<section id="cookies" class="tab-content">
+			<article>
+				<h1>Cookie-Richtlinie</h1>
+				<p>Diese Website setzt keine Tracking- oder Marketing-Cookies ein und nutzt keine Cookies zur Erfassung personenbezogener Daten.</p>
+				<br>
+				<p>Hinweis: Grundlegende Daten wie der Verlauf und Cache werden von deinem Browser selbst verwaltet, um die Nutzererfahrung zu verbessern.
+					Diese Speicherung erfolgt lokal auf deinem Gerät und ist für das Funktionieren der Website erforderlich.
+					Weitere Informationen zur Verwaltung von Daten findest du in den Einstellungen deines Browsers.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<div>&copy; 2024 lichtspecht.de</div>
+		<a href="#" class="footer-link" data-tab="impressum">Impressum</a>
+		<a href="#" class="footer-link" data-tab="datenschutz"> Datenschutz</a>
+		<a href="#" class="footer-link" data-tab="cookies">Cookies</a>
+	</footer>
+</body>
+
+</html>
