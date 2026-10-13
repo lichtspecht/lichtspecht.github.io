@@ -238,7 +238,7 @@ nav.responsive .icon {
 	display: flex;
 	gap: 20px;
 	flex-wrap: wrap;
-
+	align-items: flex-start;
 }
 
 .product {
@@ -285,7 +285,7 @@ nav.responsive .icon {
 .product .images .previous,
 .product .images .next {
 	position: absolute;
-	width: 50%;
+	width: 20%;
 	top: 0;
 	bottom: 0;
 	z-index: 10;
